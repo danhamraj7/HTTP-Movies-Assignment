@@ -5,11 +5,8 @@ import axios from "axios";
 const UpdateMovie = props => {
   const [updateForm, setUpdateForm] = useState({
     title: "",
-
     director: "",
-
     metascore: "",
-
     stars: ["", "", ""]
   });
 
@@ -25,11 +22,8 @@ const UpdateMovie = props => {
     axios
 
       .put(`http://localhost:5000/api/movies/${updateForm.id}`, updateForm)
-
       .then(res => console.log(res))
-
       .catch(error => console.log(error));
-
     props.history.push(`/`);
   };
 
